@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  display:flex;
+  font-family: Helvetica,sans-serif;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+.time-select,
+.player-container,
+.sound-picker{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  height: 80%;
+}
+
+.play{
+  cursor:pointer;
+}
+
+.player-container svg{
+  position: absolute;
+  height: 40%;
+  pointer-events: none;
+  transform: rotate(-90deg);
+}
+
+.time-display{
+  color: white;
+  position: absolute;
+  font-size: 50px;
+  bottom: 20%;
+}
+
+.time-select button{
+  background: none;
+  font-size: 18px;
+  width: 30%;
+  height: 10%;
+  border: 2px solid white;
+  border-radius: 40px;
+  color:white;
+  transition: all 0.5s ease-out;
+}
+
+.time-select button:hover{
+  background: white;
+  color:black;
+  transform: scale(3);
+  cursor:pointer;
+}
+
+.sound-picker button{
+  border:none;
+  cursor: pointer;
+  height: 125px;
+  width: 125px;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.sound-picker button:nth-child(1){
+    background: lightblue;
+}
+
+.sound-picker button:nth-child(2){
+    background: lightcoral;
+}
+
+.sound-picker button img{
+  height: 100%;
+}
+
+video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -10;
+}
